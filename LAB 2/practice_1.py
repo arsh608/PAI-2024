@@ -31,9 +31,27 @@ def find_maximum(*numbers):
 a= find_maximum(90,700,5000,2)
 print(a)
 
-#----------------------task3---------------------------------------------------
+#----------------------task5---------------------------------------------------
 def show_info(**details):
     for key, value in details.items():
         print(key, ":", value)
 
 show_info(name="Arsh", age=20, occupation="Engineer")
+
+#----------------------task6---------------------------------------------------
+rep= input("your good name! ")
+print("Hello!", rep)
+per=input("I hope you are fine,let me know how I can help you! ")
+per= per.upper()
+
+if per=="YES":
+    a=input("share your problem with us ")
+    print("Thanks for your feedback, we will resolve your problem ")
+
+elif per=="NO":
+    print("Thanks for your cooperation ")
+
+else:
+    b="Okay! Good to see you , stay connected"
+    print(b.center(50))
+
