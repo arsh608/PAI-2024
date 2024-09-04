@@ -1,0 +1,5 @@
+Name: ARSH
+Age: 19
+Program: BSAI
+Semester: 3
+Section: A
