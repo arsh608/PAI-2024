@@ -1,0 +1,5 @@
+Name: Arsh
+CNIC: 42101-1234567-8
+Age: 20
+Salary: 50000.0
+Contact Number: 0345-6789101
