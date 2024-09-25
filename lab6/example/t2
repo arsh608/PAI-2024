@@ -1,0 +1,5 @@
+import pandas as pd
+data=pd.read_csv(r'C:/Users/k236090/Desktop/IRIS.csv')
+print(data)
+print(data.head())
+print(data.tail())
