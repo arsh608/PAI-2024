@@ -1,0 +1,11 @@
+import pandas as pd
+data=pd.read_csv(r'C:/Users/k236090/Desktop/heart.csv')
+print(data)
+print(data['age'].mode())
+print(data['age'].mean())
+print(data.describe())
+#print(data.count())
+print(data.isnull())
+print(data['sex'].unique())
+print(data['sex'].value_counts())
+#data.drop('sex',axis=1, inplace=True)
