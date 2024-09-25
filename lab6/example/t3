@@ -1,0 +1,5 @@
+import pandas as pd
+data=pd.read_csv(r'C:/Users/k236090/Desktop/heart.csv')
+print(data.iloc[30:71, [0,6,9]]) #30 to 70 and columns unaltered
+print(data.loc[30:70 , ['cp','trestbps','oldpeak','thal']]) #30 to 70
+print(data[['cp','trestbps','oldpeak','thal']][0:30]) #0 to 29
