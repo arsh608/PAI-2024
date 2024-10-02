@@ -14,3 +14,11 @@ cpgroup= df.groupby(['ca','cp'])
 print(cpgroup['age'].mean())
 #multiple group multiple analysis
 print(cpgroup[['age','chol']].mean())
+
+print(df['trestbps'].unique())
+#fetch in betwwen range
+print(df[df['trestbps'].between(120,140)])
+#top n largest values of a specific column
+print(df.nlargest(2,'chol'))
+#top n smallest values of a specific column
+print(df.nsmallest(10,'chol'))
