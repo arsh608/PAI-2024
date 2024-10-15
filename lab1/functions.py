@@ -1,3 +1,4 @@
+//---------------------------------STRING FUNCTIONS------------------------------------
 1) capitalize() - Converts the first character to upper case.
 2) casefold() - Converts string into lower case.
 3) center() - Returns a centered string.
@@ -5,7 +6,6 @@
 5) endswith() - Returns true if the string ends with the specified value.
 6) find() - Searches the string for a specified value and returns the position of where it was
 found.
-
 7) format() - Formats specified values in a string.
 8) format_map() – This method is used to format specified values in a string by using a
 mapping (usually a dictionary) to replace placeholders with corresponding values. It is
@@ -32,3 +32,55 @@ was found.
 25) startswith() - Returns true if the string starts with the specified value.
 26) title() - Converts the first character of each word to upper case.
 27) zfill() Fills the string with a specified number of 0 values at the beginning.
+
+//-----------------------------LIST METHODS---------------------------------------
+ append(x): Adds an item to the end of the list.
+ extend(iterable): Extends the list by appending elements from an iterable.
+ insert(i, x): Inserts an item at a given position.
+ remove(x): Removes the first item from the list whose value is equal to x.
+ pop([i]): Removes and returns the item at the given position in the list.
+ clear(): Removes all items from the list.
+ index(x[, start[, end]]): Returns the index of the first item whose value is equal to x.
+ count(x): Returns the number of times x appears in the list.
+ sort(key=None, reverse=False): Sorts the items of the list in place.
+ reverse(): Reverses the elements of the list in place.
+ copy(): Returns a shallow copy of the list.
+
+
+//--------------------------SET METHODS--------------------------------------
+ add(elem): Adds an element to the set.
+ clear(): Removes all elements from the set.
+ copy(): Returns a shallow copy of the set.
+ difference(*s): Returns a new set with elements in the set that are not in the others.
+ difference_update(*s): Removes elements found in the specified sets.
+ discard(elem): Removes an element from the set if it is a member.
+ intersection(*s): Returns a new set with elements common to all specified sets.
+ intersection_update(*s): Updates the set with the intersection of itself and others.
+ isdisjoint(s): Returns True if the set has no elements in common with s.
+ issubset(s): Returns True if the set is a subset of s.
+ issuperset(s): Returns True if the set is a superset of s.
+ pop(): Removes and returns an arbitrary element from the set.
+ remove(elem): Removes an element from the set; raises KeyError if the element is not present.
+ discard(elem): Removes an element from the set if it is present.
+ union(*s): Returns a new set with elements from the set and all others.
+ update(*s): Updates the set with the union of itself and others.
+
+
+//-------------------------TUPLE METHODS--------------------------------------------
+ count(x): Returns the number of times x appears in the tuple.
+ index(x[, start[, end]]): Returns the index of the first item whose value is equal to x.
+
+//--------------------------DICTIONARY METHODS-----------------------------------
+ clear(): Removes all items from the dictionary.
+ copy(): Returns a shallow copy of the dictionary.
+ fromkeys(iterable, value=None): Creates a new dictionary with keys from iterable and values set to value.
+ get(key, default=None): Returns the value for the key if it exists, otherwise default.
+ items(): Returns a view object that displays a list of a dictionary’s key-value tuple pairs.
+ keys(): Returns a view object that displays a list of all the dictionary's keys.
+ pop(key, default=None): Removes the specified key and returns the corresponding value.
+ popitem(): Removes and returns a (key, value) pair as a tuple.
+ setdefault(key, default=None): Returns the value for key if key is in the dictionary; otherwise, inserts key
+with a default value.
+ update(*args, **kwargs): Updates the dictionary with elements from another dictionary or from an iterable
+of key-value pairs.
+ values(): Returns a view object that displays a list of all the dictionary's values.
