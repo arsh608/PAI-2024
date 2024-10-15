@@ -1,63 +1,47 @@
-#include <iostream>
-using namespace std;
+class Student:
+    def __init__(self):
+        self._id = None
+        self._name = None
 
-class Student {
-protected:
-    int id;
-    string name;
+    def set_student_details(self, student_id, student_name):
+        self.id = student_id
+        self.name = student_name
 
-public:
-    void setStudentDetails(int student_id, string student_name) {
-        id = student_id;
-        name = student_name;
-    }
+    def display_student_details(self):
+        print(f"Student ID: {self.id}")
+        print(f"Student Name: {self.name}")
 
-    void displayStudentDetails() {
-        cout << "Student ID: " << id << endl;
-        cout << "Student Name: " << name << endl;
-    }
-};
 
-class Marks : public Student {
-protected:
-    int marks_algo;
-    int marks_dataScience;
-    int marks_calculus;
+class Marks(Student):
+    def __init__(self):
+        super().__init__()
+        self._marks_algo = None
+        self._marks_data_science = None
+        self._marks_calculus = None
 
-public:
-    void setMarks(int algo, int ds, int calc) {
-        marks_algo = algo;
-        marks_dataScience = ds;
-        marks_calculus = calc;
-    }
+    def set_marks(self, algo, ds, calc):
+        self.marks_algo = algo
+        self.marks_data_science = ds
+        self.marks_calculus = calc
 
-    void displayMarks() {
-        cout << "Marks in Algorithms: " << marks_algo << endl;
-        cout << "Marks in Data Science: " << marks_dataScience << endl;
-        cout << "Marks in Calculus: " << marks_calculus << endl;
-    }
-};
+    def display_marks(self):
+        print(f"Marks in Algorithms: {self.marks_algo}")
+        print(f"Marks in Data Science: {self.marks_data_science}")
+        print(f"Marks in Calculus: {self.marks_calculus}")
 
-class Result : public Marks {
-public:
-    void displayResult() {
-        int total = marks_algo + marks_dataScience + marks_calculus;
-        double average = total / 3.0;
 
-        cout << "Total Marks: " << total << endl;
-        cout << "Average Marks: " << average << endl;
-    }
-};
+class Result(Marks):
+    def display_result(self):
+        total = self.marks_algo + self.marks_data_science + self.marks_calculus
+        average = total / 3.0
 
-int main() {
-    Result student1;
+        print(f"Total Marks: {total}")
+        print(f"Average Marks: {average:.2f}")
 
-    student1.setStudentDetails(101, "John Doe");
-    student1.setMarks(85, 90, 80);
 
-    student1.displayStudentDetails();
-    student1.displayMarks();
-    student1.displayResult();
-
-    return 0;
-}
+student1 = Result()
+student1.set_student_details(101, "John Doe")
+student1.set_marks(85, 90, 80)
+student1.display_student_details()
+student1.display_marks()
+student1.display_result()
