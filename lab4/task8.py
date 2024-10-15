@@ -1,30 +1,19 @@
-#include <iostream>
-using namespace std;
+class Account:
+    def __init__(self):
+        self.account_no = None
+        self.account_bal = None
+        self.security_code = None
 
-class Account {
-private:
-    int account_no;
-    double account_bal;
-    int security_code;
+    def initialize(self, acc_no, acc_bal, sec_code):
+        self.account_no = acc_no
+        self.account_bal = acc_bal
+        self.security_code = sec_code
 
-public:
-    void initialize(int acc_no, double acc_bal, int sec_code) {
-        account_no = acc_no;
-        account_bal = acc_bal;
-        security_code = sec_code;
-    }
+    def display(self):
+        print(f"Account No: {self.account_no}")
+        print(f"Account Balance: ${self.account_bal:.2f}")
+        print(f"Security Code: {self.security_code}")
 
-    void display() {
-        cout << "Account No: " << account_no << endl;
-        cout << "Account Balance: $" << account_bal << endl;
-        cout << "Security Code: " << security_code << endl;
-    }
-};
-
-int main() {
-    Account myAccount;
-    myAccount.initialize(12345, 2500.75, 9876);
-    myAccount.display();
-
-    return 0;
-}
+my_account = Account()
+my_account.initialize(12345, 2500.75, 9876)
+my_account.display()
